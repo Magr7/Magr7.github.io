@@ -25,3 +25,10 @@ title: Mysql常用操作
     group by period
     order by record_count DESC;
   ```
++ Mysql 查询数据是否存在
+  ``` sql
+  ### 差：
+  select count(*) from tab_record where a=1 and b= 1;
+  ### 优：
+  select id from tab_record where a=1 and b=1 limit 1;
+  ```
